@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>root@tryAntik:~#</title>
     <style>
-        :root { --bg: #0f0f0f; --text: #cccccc; --accent: #f76572; --pic: #404040;}
+        :root { 
+            --bg: #0f0f0f; 
+            --text: #cccccc; 
+            --accent: #f76572; 
+            --pic: #404040;
+        }
+	
         body {
+            transform: scale(1.5);
+            transform-origin: top left;
             background-color: var(--bg);
             color: var(--text);
             font-family: 'Courier New', monospace;
@@ -14,15 +22,31 @@
             line-height: 1.5;
             max-width: 800px;
             margin: 0 auto;
+            width: 66.67%;
         }
-        a { color: var(--text); text-decoration: underline; text-decoration-color: var(--accent); }
-        a:hover { background-color: var(--accent); color: var(--bg); text-decoration: none; }
         
-        .cmd { color: var(--accent); margin-right: 10px; }
-        .section { margin-bottom: 2rem; }
+        a { 
+            color: var(--text); 
+            text-decoration: underline; 
+            text-decoration-color: var(--accent); 
+        }
+        a:hover { 
+            background-color: var(--accent); 
+            color: var(--bg); 
+            text-decoration: none; 
+        }
+        
+        .cmd { 
+            color: var(--accent); 
+            margin-right: 10px; 
+            font-size: 1.1em;
+        }
+        .section { 
+            margin-bottom: 2rem; 
+        }
         
         .header-container {
-			margin-top: 20px;
+            margin-top: 20px;
             display: flex;
             align-items: center;
             gap: 20px; 
@@ -36,16 +60,40 @@
             object-fit: cover;  
             border: 2px solid var(--pic); 
         }
+        
         @media (max-width: 600px) {
-            .header-container { flex-direction: column; align-items: flex-start; }
+            body { transform: scale(1.2); width: 83.33%; }
+            .header-container { 
+                flex-direction: column; 
+                align-items: flex-start; 
+            }
         }
 
-        .cursor { display: inline-block; width: 10px; height: 1.2em; background: var(--accent); vertical-align: text-bottom; animation: blink 1s step-end infinite; }
-        @keyframes blink { 50% { opacity: 0; } }
+        .cursor { 
+            display: inline-block; 
+            width: 10px; 
+            height: 1.2em; 
+            background: var(--accent); 
+            vertical-align: text-bottom; 
+            animation: blink 1s step-end infinite; 
+        }
+        @keyframes blink { 
+            50% { opacity: 0; } 
+        }
         
-        h1 { font-size: 1.2rem; margin: 0 0 0.5rem 0; font-weight: normal; }
-        ul { list-style-type: none; padding: 0; }
-        li::before { content: "> "; color: var(--accent); }
+        h1 { 
+            font-size: 1.2rem; 
+            margin: 0 0 0.5rem 0; 
+            font-weight: normal; 
+        }
+        ul { 
+            list-style-type: none; 
+            padding: 0; 
+        }
+        li::before { 
+            content: "> "; 
+            color: var(--accent); 
+        }
     </style>
 </head>
 <body>
@@ -83,5 +131,3 @@
     </div>
 </body>
 </html>
-
-
